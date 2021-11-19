@@ -17,13 +17,13 @@ function RenderCampsite({campsite}){
 
   
 function CampsiteInfo(props) {
-        console.log(this.props);
-        if(this.props.campsite){
+    console.log(props);
+        if(props.campsite){
             return (
                 <div className="container">
                     <div className="row">
-                        <RenderCampsite campsite={props.campsite} /> 
-                        <RenderComments comments={props.campsite.comments} />
+                        <RenderCampsite campsite={props.campsite}></RenderCampsite> 
+                        <RenderComments comments={props.campsite.comments}></RenderComments>
                     </div>
                 </div>
             );
