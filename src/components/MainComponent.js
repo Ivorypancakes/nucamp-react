@@ -9,7 +9,6 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
-import About from './AboutComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { parenthesizedExpression } from '@babel/types';
 
@@ -22,10 +21,6 @@ class Main extends Component {
             partners: PARTNERS,
             promotions: PROMOTIONS
         };
-    }
-
-    onCampsiteSelect(campsiteId) {
-        this.setState({selectedCampsite: campsiteId});
     }
 
     render() {
@@ -47,6 +42,7 @@ class Main extends Component {
                 />
             );
         };    
+     
 
         return (
             <div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function RenderDirectoryItem({campsite}) {
     return (
         <Card>
-            <Link to={'/directory/${campsite.id}'}>
+            <Link to={`/directory/${campsite.id}`}>                
                 <CardImg width="100%" src={campsite.image} alt={campsite.name} />
                 <CardImgOverlay>
                     <CardTitle>{campsite.name}</CardTitle>
@@ -33,6 +33,8 @@ function Directory(props) {
                         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
                         <BreadcrumbItem active>Directory</BreadcrumbItem>
                     </Breadcrumb>
+                    <h2>Directory</h2>
+                    <hr />
                 </div>
             </div>
             <div className="row">
