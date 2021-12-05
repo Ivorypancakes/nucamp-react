@@ -80,6 +80,10 @@ export const fetchPartners = () => dispatch => {
         .then(partners => dispatch(addPartners(partners)));
 };
 
+export const partnersLoading = () => ({
+    type: ActionTypes.PARTNERS_LOADING
+});
+
 export const partnersFailed = errMess => ({
     type: ActionTypes.PARTNERS_FAILED,
     payload: errMess
@@ -90,6 +94,4 @@ export const addPartners = partners => ({
     payload: partners
 });
 
-export const partnersLoading = () => ({
-    type: ActionTypes.PARTNERS_LOADING
-});
+

@@ -26,10 +26,10 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    addComment: (camsiteID, rating, author, text) => (addComment(camsiteID, rating, author, text)),
+    addComment: (campsiteId, rating, author, text) => (addComment(campsiteId, rating, author, text)),
     fetchCampsites: () => (fetchCampsites()),
     resetFeedbackForm: () => (actions.reset('feedbackForm')),
-    fetchComments: () => (fetchComments()), 
+    fetchComments: () => (fetchComments()),
     fetchPromotions: () => (fetchPromotions()),
     fetchPartners: () => (fetchPartners())
 };
@@ -54,8 +54,8 @@ class Main extends Component {
                     promotionLoading={this.props.promotions.isLoading}
                     promotionErrMess={this.props.promotions.errMess}
                     partner={this.props.partners.partners.filter(partner => partner.featured)[0]}
-                    partnerLoading={this.props.partner.isLoading}
-                    partnerErrMess={this.props.partner.errMess}
+                    partnersLoading={this.props.partners.isLoading}
+                    partnersErrMess={this.props.partners.errMess}
                 />
             );
         };
