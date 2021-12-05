@@ -24,7 +24,6 @@ function RenderCard({ item, isLoading, errMess }) {
         </Card>
     );
 }
-
 function Home(props) {
     console.log(props)
     return (
