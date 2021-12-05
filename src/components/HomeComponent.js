@@ -14,6 +14,7 @@ function RenderCard({ item, isLoading, errMess }) {
             <h4>{errMess}</h4>
         );
     }
+
     return (
         <Card>
             <CardImg src={baseUrl + item.image} alt={item.name} />
@@ -24,6 +25,7 @@ function RenderCard({ item, isLoading, errMess }) {
         </Card>
     );
 }
+
 function Home(props) {
     console.log(props)
     return (
