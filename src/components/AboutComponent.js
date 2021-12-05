@@ -9,7 +9,7 @@ function RenderPartner({partner}) {
     if(partner) {
         return (
             <React.Fragment>
-                <Media object width="150" src={baseUrl + partner.image} alt={partner.name} />
+                <Media object width="150" src={partner.image} alt={partner.name} />
                 <Media body className="ml-5 mb-4">
                     <Media heading>{partner.name}</Media>
                     {partner.description}
@@ -25,7 +25,7 @@ function RenderPartner({partner}) {
 
 function About(props) {
 
-    const partners = props.partners.partners.map(partner => {
+    const partners = props.partners.map(partner => {
         return (
             <Media li key={partner.id}>
               <RenderPartner partner={partner} />
@@ -34,26 +34,7 @@ function About(props) {
         );
     });
 
-    if (props.partners.isLoading) {
-        return (
-            <div className="container">
-                <div className="row">
-                    <Loading />
-                </div>
-            </div>
-        );
-    }
-    if (props.partners.errMess) {
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <h4>{props.errMess}</h4>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    
 
     return (
         <div className="container">
